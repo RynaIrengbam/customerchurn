@@ -1,7 +1,9 @@
 **Objective**
+
 The objective of this analysis is to develop a machine learning model that accurately predicts customer attrition (churn) using demographic and behavioural data. By leveraging exploratory data analysis, unsupervised learning, and supervised classification models, the goal is to identify high-risk customers which in turn can inform targeted retention strategies.
 
 **EDA Results**
+
 Kmeans was performed on preprocessed data and was later visualized using PCA to understand general cluster separation. The clusters appeared fairly well separated in the 2D PCA space, with visible boundaries. However, some overlap is present, indicating that boundaries between some clusters aren’t perfectly linear in the original space. This suggests that models that can capture interactions and nonlinearities (e.g., Random Forest, XGBoost) may perform better than purely linear models like Logistic Regression.
 
 Cluster descriptions based on demographic and behavioural data:
@@ -12,6 +14,7 @@ Cluster 2: high attrition rate, almost equal gender distribution, low credit lim
 Cluster 3: moderate attrition, mostly male, well-distributed income, high credit limit and number of transactions but low utilization ratio
 
 **Model Building and Results**
+
 Model choice was guided by insights from the EDA and clustering analysis. The KMeans clustering revealed meaningful
 customer segments with distinct patterns in transaction behavior, credit limits, and utilization ratios. For example,
 Cluster 2 had a high churn rate and showed nonlinear characteristics such as high utilization with low credit limits
